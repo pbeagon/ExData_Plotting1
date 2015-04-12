@@ -30,3 +30,5 @@ with(workingdata,
           # Scaled axis annotations and labels to 80%, to better fit the 480x480 PNG image.
           cex.axis=0.8,
           cex.lab=0.8))
+
+title(main="Plot 2", adj=0)    # adj=0 produces left-justified text

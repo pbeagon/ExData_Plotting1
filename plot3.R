@@ -59,3 +59,5 @@ legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
        lty=1,                        # Set legend as line type
        col=c("black","red","blue"),  # Re-use same colouts as plots 
        cex=0.7)
+
+title(main="Plot 3", adj=0)    # adj=0 produces left-justified text

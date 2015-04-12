@@ -17,6 +17,7 @@ workingdata  <- filter(alldata, Date >= "2007-02-01" & Date <= "2007-02-02")
 workingdata$Global_active_power <- as.numeric(as.character(workingdata$Global_active_power))
 
 # Draw a histrogram, setting the breaks, bar colour, main title and x limits but *not* axes
+par(mfrow = c(1, 1), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
 hist(workingdata$Global_active_power,
      breaks=seq(0,8,0.5),
      freq=TRUE,
@@ -31,3 +32,5 @@ hist(workingdata$Global_active_power,
 # The smaller axes' text all appear in the 480x480 .png image.
 axis(side=1, at=seq(0,6,2), labels=seq(0,6,2), cex.axis=0.8)
 axis(side=2, at=seq(0,1200,200), labels=seq(0,1200,200), cex.axis=0.8)
+
+title(main="Plot 1", adj=0, outer=TRUE)    # adj=0 produces left-justified text
